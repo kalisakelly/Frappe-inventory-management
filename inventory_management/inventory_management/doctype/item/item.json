@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:item_name",
+ "creation": "2023-06-06 10:54:40.461350",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "item_category",
+  "asset_type",
+  "quantity",
+  "quantity_onhold",
+  "all_requests",
+  "column_break_8mon",
+  "serial_number",
+  "description",
+  "section_break_ilri",
+  "unit_price",
+  "column_break_qeyf",
+  "total_value",
+  "section_break_edni",
+  "list_of_requests"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "item_category.asset_type",
+   "fieldname": "asset_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Available quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8mon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "item_category",
+   "fieldtype": "Link",
+   "label": "Item Category",
+   "options": "Item Category"
+  },
+  {
+   "fieldname": "quantity_onhold",
+   "fieldtype": "Int",
+   "label": "Quantity_onhold"
+  },
+  {
+   "fieldname": "section_break_edni",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "list_of_requests",
+   "fieldtype": "Table",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Requested item",
+   "options": "List of requests"
+  },
+  {
+   "fieldname": "total_value",
+   "fieldtype": "Int",
+   "label": "Total Value"
+  },
+  {
+   "fieldname": "section_break_ilri",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qeyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Int",
+   "label": "Unit price"
+  },
+  {
+   "fieldname": "all_requests",
+   "fieldtype": "Int",
+   "label": "Number of approved requests"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-25 13:27:16.310481",
+ "modified_by": "Administrator",
+ "module": "Inventory management",
+ "name": "Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Staff",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "item_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

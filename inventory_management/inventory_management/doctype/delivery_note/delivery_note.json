@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "autoname": "requestor.###",
+ "creation": "2023-08-23 15:51:52.154588",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "request_id",
+  "requestor",
+  "delivered_at",
+  "column_break_w0mp",
+  "status",
+  "section_break_z30a",
+  "requested_item",
+  "received_by",
+  "sign_here_to_receive",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "request_id",
+   "fieldtype": "Data",
+   "label": "Request ID"
+  },
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Data",
+   "label": "Requestor"
+  },
+  {
+   "fieldname": "column_break_w0mp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Instock\nPending Delivery\nDelivered\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_z30a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requested_item",
+   "fieldtype": "Table",
+   "label": "Requested Item",
+   "options": "Requested Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Note",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivered_at",
+   "fieldtype": "Datetime",
+   "label": "Delivered at"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "sign_here_to_receive",
+   "fieldtype": "Signature",
+   "label": "Sign here to receive"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-13 10:09:16.303269",
+ "modified_by": "Administrator",
+ "module": "Inventory management",
+ "name": "Delivery Note",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "stock-keeper",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "stock-keeper",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Staff",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

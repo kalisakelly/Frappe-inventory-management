@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-07 18:34:14.495555",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "requestor",
+  "column_break_w0mp",
+  "status",
+  "section_break_vlag",
+  "description",
+  "section_break_3fjc",
+  "requested_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Link",
+   "label": "Requestor",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_w0mp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\n1st Level Approval\n2nd Level Aproval\nPending Delivery\nDelivered\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3fjc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requested_item",
+   "fieldtype": "Table",
+   "label": "Requested Item",
+   "options": "Requested Item"
+  },
+  {
+   "fieldname": "section_break_vlag",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-07 18:55:52.423438",
+ "modified_by": "Administrator",
+ "module": "Inventory management",
+ "name": "Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Requestor",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

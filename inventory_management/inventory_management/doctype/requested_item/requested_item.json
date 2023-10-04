@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-07 18:33:24.744553",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "requested_item",
+  "requested_quantity",
+  "available_quantity",
+  "quantity_onhold",
+  "section_break_08uh",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "requested_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Requested Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "requested_quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Requested Quantity"
+  },
+  {
+   "fetch_from": "requested_item.quantity",
+   "fieldname": "available_quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Available Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_08uh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "status",
+   "options": "Denied\n1st approval\n2nd approval"
+  },
+  {
+   "fetch_from": "requested_item.quantity_onhold",
+   "fieldname": "quantity_onhold",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Quantity onhold",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-19 13:22:20.936044",
+ "modified_by": "Administrator",
+ "module": "Inventory management",
+ "name": "Requested Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
